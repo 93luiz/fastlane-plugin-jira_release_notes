@@ -9,7 +9,7 @@ module Fastlane
       end
 
       def self.markdown_format(issues, url)
-        issues.map { |i| "[#{i.key}](#{url}/browse/#{i.key}) - #{i.summary}" } .join("\n")
+        issues.map { |i| "[#{i.key}](#{url}/browse/#{i.key}) - #{i.summary}" } .join("\n\n")
       end
 
       def self.html_format(issues, url)
