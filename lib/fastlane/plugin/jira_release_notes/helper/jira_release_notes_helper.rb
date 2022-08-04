@@ -8,6 +8,10 @@ module Fastlane
         issues.map { |i| "[#{i.key}] - #{i.summary}" } .join("\n")
       end
 
+      def self.markdown_format(issues, url)
+        issues.map { |i| "[#{i.key}](#{url}/browse/#{i.key}) - #{i.summary}" } .join("\n")
+      end
+
       def self.html_format(issues, url)
         require "cgi"
         issues.map do |i|

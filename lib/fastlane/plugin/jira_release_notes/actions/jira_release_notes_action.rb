@@ -53,6 +53,8 @@ module Fastlane
           Helper::JiraReleaseNotesHelper.plain_format(issues)
         when "html"
           Helper::JiraReleaseNotesHelper.html_format(issues, params[:url])
+        when "markdown"
+          Helper::JiraReleaseNotesHelper.markdown_format(issues, params[:url])
         else
           issues
         end
